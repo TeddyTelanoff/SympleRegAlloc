@@ -1,7 +1,11 @@
-#include <cstdio>
+#include <cstdlib>
+
+#include "Symple/RegAlloc/.h"
 
 int main()
 {
-	std::puts("Hello, world!");
-	(void)std::getchar();
+	auto regManager = Symple::RegAlloc::CreateRegManager();
+	Symple::RegAlloc::DestroyRegManager(regManager);
+
+	std::system("pause");
 }
